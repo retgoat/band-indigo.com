@@ -6,6 +6,7 @@ defmodule BandIndigo.Repo.Migrations.CreateDisk do
       add :name, :string
       add :year, :date
       add :label, :string
+      add :cover_name, :string
 
       timestamps
     end

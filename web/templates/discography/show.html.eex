@@ -1,0 +1,16 @@
+<h3>
+  <%= @disk.name %>
+  <span><%= @disk.year |> Calendar.Strftime.strftime!("%Y") %></span>
+</h3>
+<div class="disk-wrapper">
+  <img class="cover" src="<%= "/images/" <> @disk.cover_name %>"/>
+  <div class="tracks"></div>
+  <ul>
+    <%= for track <- @disk.tracks do %>
+      <li>
+        <span class="name"><%= track.name %></span>
+        <span class="duration"><%= track.duration |> Calendar.Strftime.strftime!("%M:%S") %></span>
+      </li>
+    <% end %>
+  </ul>
+</div>

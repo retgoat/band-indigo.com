@@ -1,7 +1,7 @@
-defmodule BandIndigo.LayoutView do
+defmodule BandIndigo.BandView do
   use BandIndigo.Web, :view
 
   def title do
-    "Band Indigo"
+    "Band"
   end
 end

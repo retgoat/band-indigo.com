@@ -1,0 +1,19 @@
+<%= for disk <- @disks do %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="disk-wrapper">
+        <div class="cover">
+          <a href="<%= discography_path(@conn, :show, disk.id) %>">
+            <img class="cover" src="<%= "/images/" <> disk.cover_name %>" width="300"/>
+          </a>
+        </div>
+        <div class="disk-info">
+        <a href="<%= discography_path(@conn, :show, disk.id) %>">
+          <span class="name"><%= disk.name %></span>
+          <span class="release-year"></span>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -17,10 +17,9 @@ defmodule BandIndigo.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-  end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", BandIndigo do
-  #   pipe_through :api
-  # end
+    get "/discography", DiscographyController, :index
+    get "/discography/:id", DiscographyController, :show
+    get "/band", BandController, :index
+  end
 end

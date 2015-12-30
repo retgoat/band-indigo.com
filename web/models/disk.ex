@@ -3,15 +3,16 @@ defmodule BandIndigo.Disk do
   use Ecto.Schema
 
   schema "disks" do
-    field :name,      :string
-    field :year,      Ecto.Date
-    field :label,     :string
-    has_many :tracks, BandIndigo.Track
+    field :name,       :string
+    field :year,       Ecto.Date
+    field :label,      :string
+    field :cover_name, :string
+    has_many :tracks,  BandIndigo.Track
 
     timestamps
   end
 
-  @required_fields ~w(name year label)
+  @required_fields ~w(name year label cover_name)
   @optional_fields ~w()
 
   @doc """
