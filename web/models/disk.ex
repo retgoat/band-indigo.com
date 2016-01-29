@@ -1,6 +1,7 @@
 defmodule BandIndigo.Disk do
   use BandIndigo.Web, :model
   use Ecto.Schema
+  import Ecto.Query
 
   schema "disks" do
     field :name,       :string

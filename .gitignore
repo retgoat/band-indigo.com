@@ -1,5 +1,6 @@
 /_build
 /deps
+/graphics
 erl_crash.dump
 *.ez
 # App artifacts

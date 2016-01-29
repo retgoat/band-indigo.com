@@ -9,22 +9,23 @@
 
     <title><%= title %></title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
     <div class="container" role="main">
       <div class="header">
-        <ul class="nav nav-pills">
-          <li><a href="<%= page_path @conn, :index %>">Home</a></li>
-          <li><a href="<%= band_path @conn, :index %>">Band</a></li>
-          <li><a href="<%= discography_path @conn, :index %>">Discography</a></li>
-          <li></li>
-        </ul>
-        <%# <span class="logo"></span> %>
-      </div>
+        <div class="index-logo-wrapper">
+          <%# <div class="logo"></span> %>
+          <img src="/images/indigo_logo_white.svg" class="main-logo">
+        </div>
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+        <ul class="nav nav-pills">
+          <li><%= link "Home", to: page_path(@conn, :index), class: active_class(@conn, page_path(@conn, :index))%></li>
+          <li><%= link "Band", to: band_path(@conn, :index), class: active_class(@conn, band_path(@conn, :index))%></li>
+          <li><%= link "Music", to: discography_path(@conn, :index), class: active_class(@conn, discography_path(@conn, :index))%></li>
+        </ul>
+      </div>
 
       <%= @inner %>
 

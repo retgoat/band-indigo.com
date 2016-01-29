@@ -5,12 +5,7 @@ defmodule BandIndigo.DiscographyController do
   alias BandIndigo.Disk
 
   def index(conn, _params) do
-    disks = Repo.all(Disk)
+    disks = Disk  |> Ecto.Query.order_by(desc: :year) |> Repo.all |> Repo.preload [:tracks]
     render(conn, "index.html", disks: disks)
-  end
-
-  def show(conn, %{"id" => id}) do
-    disk = Disk |> Repo.get!(id) |> Repo.preload [:tracks]
-    render(conn, "show.html", disk: disk)
   end
 end

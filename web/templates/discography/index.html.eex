@@ -1,19 +1,36 @@
 <%= for disk <- @disks do %>
   <div class="row">
-    <div class="col-md-6">
-      <div class="disk-wrapper">
-        <div class="cover">
-          <a href="<%= discography_path(@conn, :show, disk.id) %>">
-            <img class="cover" src="<%= "/images/" <> disk.cover_name %>" width="300"/>
-          </a>
-        </div>
-        <div class="disk-info">
-        <a href="<%= discography_path(@conn, :show, disk.id) %>">
-          <span class="name"><%= disk.name %></span>
-          <span class="release-year"></span>
-        </a>
-        </div>
+    <div class="disk-wrapper">
+      <h3><%= Calendar.Strftime.strftime!(disk.year, "%Y") <> " " <> disk.name %></h3>
+      <div class="cells">
+        <div class="cell cover-wrapper">
+          <img class="cover" src="<%= "/images/" <> disk.cover_name %>"/>
+        </div> <!-- cover cell -->
+
+        <div class="cell">
+          <div class="tracks-wrapper">
+            <ol class="tracks-list">
+              <%= for track <- disk.tracks do %>
+                <li>
+                  <span><%= track.name %></span>
+                  <span class="line"></span>
+                  <span class="duration">
+                    <%= Calendar.Strftime.strftime!(track.duration, "%M:%S") %>
+                  </span>
+                </li>
+              <% end %>
+            </ol>
+          </div> <!-- tracks-wrapper -->
+        </div> <!-- tracks cell -->
+      </div> <!-- cells -->
+      <div class="store-links">
+        <a href="#">Buy it on iTunes</a>
+        <a href="#">Buy it on Google Play</a>
+        <a href="#">Buy it on Amazon</a>
+        <%# <img src="/images/itunes.png" alt="iTunes logo" />
+        <img src="/images/google_play.png" alt="Google Play logo"/>
+        <img src="/images/amazon.png" alt="Amazon logo"/> %>
       </div>
-    </div>
-  </div>
+    </div> <!-- disk-wrapper -->
+  </div> <!-- row -->
 <% end %>

@@ -19,7 +19,6 @@ defmodule BandIndigo.Router do
     get "/", PageController, :index
 
     get "/discography", DiscographyController, :index
-    get "/discography/:id", DiscographyController, :show
     get "/band", BandController, :index
   end
 end
