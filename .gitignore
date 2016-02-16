@@ -29,3 +29,7 @@ erl_crash.dump
 # variables.
 /config/prod.secret.exs
 
+# ignore confirmation files
+c39292762c6b.html
+googlefca53270e5cfeaeb.html
+
