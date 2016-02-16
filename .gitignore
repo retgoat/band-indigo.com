@@ -9,6 +9,7 @@ erl_crash.dump
 /deps
 /*.ez
 *.sublime-*
+/log/*
 
 # Generate on crash by the VM
 erl_crash.dump

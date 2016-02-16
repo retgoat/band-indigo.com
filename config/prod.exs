@@ -13,11 +13,16 @@ use Mix.Config
 # which you typically run after static files are built.
 config :band_indigo, BandIndigo.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
+  url: [host: "band-indigo.com"],
   cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production
-config :logger, level: :info
+config :logger,
+  backends: [{LoggerFileBackend, :info}]
+
+config :logger, :info,
+  path: "./log/prod.log",
+  level: :info
 
 # ## SSL Support
 #

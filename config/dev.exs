@@ -25,7 +25,16 @@ config :band_indigo, BandIndigo.Endpoint,
   ]
 
 # Do not include metadata nor timestamps in development logs
-config :logger, :console, format: "[$level] $message\n"
+# config :logger, format: "[$level] $message\n",
+#   backends: [{LoggerFileBackend, :error_log}, :console]
+# config :logger, :console, format: "[$level] $message\n"
+
+config :logger,
+  backends: [{LoggerFileBackend, :info}]
+
+config :logger, :info,
+  path: "./log/dev.log",
+  level: :info
 
 # Set a higher stacktrace during development.
 # Do not configure such in production as keeping
