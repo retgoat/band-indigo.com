@@ -176,7 +176,6 @@ ol.tracks-list {
 }
 
 ol.tracks-list li {
-  /*display: table;*/
 }
 
 span.duration {
@@ -185,7 +184,6 @@ span.duration {
 
 
 .store-links {
-  /*margin-top: 20px;*/
   text-align: center;
 }
 
@@ -205,6 +203,20 @@ span.duration {
 }
 /* Discography*/
 
+/* Band */
+.social{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.social img {
+  width: 50px;
+  margin-right: 30px;
+  border: none;
+}
+
+/* Band */
+
 /* ----------- iPhone 4 (4S) and 5(5S) ----------- */
 
 /* Portrait and Landscape */
@@ -213,7 +225,7 @@ span.duration {
   and (-webkit-min-device-pixel-ratio: 2) {
 
   .indigo-photo-wrapper img {
-    width: 100%;
+    width: 90%;
   }
 
   .store-logos img:first-child {
@@ -246,7 +258,7 @@ span.duration {
   }
 
   .main-logo{
-    width: 100%;
+    width: 90%;
   }
 
   .cells .cell:first-child {
@@ -264,7 +276,7 @@ span.duration {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
   .main-logo{
-    width: 100%;
+    width: 70%;
   }
 
   .cells .cell:first-child {
@@ -284,7 +296,7 @@ span.duration {
   and (max-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3) {
     img.cover {
-      width: 100%;
+      width: 70%;
 
     }
 

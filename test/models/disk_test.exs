@@ -3,7 +3,7 @@ defmodule BandIndigo.DiskTest do
 
   alias BandIndigo.Disk
 
-  @valid_attrs %{cover: "some content", label: "some content", name: "some content", track_id: 42, year: "2010-04-17 14:00:00"}
+  @valid_attrs %{cover_name: "some content", label: "some content", name: "some content", track_id: 42, year: "2010-04-17"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

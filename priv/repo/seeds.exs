@@ -12,7 +12,7 @@
 {:ok, d1_date} = Ecto.Date.cast("2009-01-11")
 {:ok, d2_date} = Ecto.Date.cast("2012-01-11")
 
-d1 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "Earth all green like an orange", label: "Georgaphy Edge", year: d1_date, cover_name: "earth_2009.jpg"})
+d1 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "La terre est bleue...", label: "Georgaphy Edge", year: d1_date, cover_name: "earth_2009.jpg"})
 d2 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "Bushido", label: "Georgaphy Edge", year: d2_date, cover_name: "bushido_2012.jpg"})
 
 tracks = [
