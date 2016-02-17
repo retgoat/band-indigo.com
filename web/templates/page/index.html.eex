@@ -1,8 +1,9 @@
 <div class="indigo-photo-wrapper">
-<img src="/images/indigo-photo.jpg"/>
+  <!--<h1>Band Indigo</h1> %>-->
+  <img src="/images/indigo-photo.jpg" alt="Band Indigo"/>
 </div>
 <div class="store-logos">
-  <img src="/images/itunes.png" alt="iTunes logo" />
-  <img src="/images/google_play.png" alt="Google Play logo"/>
-  <img src="/images/amazon.png" alt="Amazon logo"/>
+  <img src="/images/itunes.png" alt="Available on iTunes" />
+  <img src="/images/google_play.png" alt="Get it in Google Play"/>
+  <img src="/images/amazon.png" alt="Available in Amazon"/>
 </div>
