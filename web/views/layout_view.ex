@@ -1,8 +1,12 @@
 defmodule BandIndigo.LayoutView do
   use BandIndigo.Web, :view
 
-  def title do
-    "Band Indigo"
+  def title(conn) do
+    case conn.path_info do
+      [] -> "Band Indigo: Home"
+      _ ->
+        "Band Indigo: #{String.capitalize(hd conn.path_info)}"
+    end
   end
 
   def active_class(conn, path) do

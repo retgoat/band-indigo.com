@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Band Indigo landing page"/>
+    <meta name="keywords" content="Bank Indigo, music, Instrumental rock, instrumental, rock, iTunes, Google Play, Amazon"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Roman Sotnikov"/>
 
-    <title><%= title %></title>
+    <title><%= title(@conn) %></title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
   </head>
@@ -18,7 +20,6 @@
         <div class="index-logo-wrapper">
           <img src="/images/indigo_logo_white.svg" class="main-logo">
         </div>
-
         <ul class="nav nav-pills">
           <li>
             <%= link "Home", to: page_path(@conn, :index),
