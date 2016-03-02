@@ -15,10 +15,18 @@
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=422989191054100";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container" role="main">
       <div class="header">
         <div class="index-logo-wrapper">
-          <img src="/images/indigo_logo_white.svg" class="main-logo">
+          <img src="/images/indigo_logo_white.svg" class="main-logo" alt="band indigo logo"/>
         </div>
         <ul class="nav nav-pills">
           <li>
@@ -38,6 +46,10 @@
 
       <%= @inner %>
 
+      <div class="bottom">
+        <div class="fb-like" data-href="https://www.facebook.com/band.indigo.nsk" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        <div class="tw-share"><a href="https://twitter.com/share" class="twitter-share-button" data-via="retgoat">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+      </div>
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 

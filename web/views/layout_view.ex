@@ -3,7 +3,7 @@ defmodule BandIndigo.LayoutView do
 
   def title(conn) do
     case conn.path_info do
-      [] -> "Band Indigo: Home"
+      [] -> "Band Indigo — Instrumental Rock From Siberia"
       _ ->
         "Band Indigo: #{String.capitalize(hd conn.path_info)}"
     end

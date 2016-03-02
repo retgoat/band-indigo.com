@@ -36,9 +36,31 @@ a {
   margin-top: 40px;
 }
 
+h1, h2 {
+  border-bottom: dotted 1px rgba(255,255,255, 0.3);
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.small-content h2 {
+  border: none;
+  font-size: 16px;
+  font-weight: normal;
+}
+
 .slogan-wrapper h1 {
   font-size: 18px;
   font-weight: 300;
+  border: none;
+}
+
+.slogan-wrapper h2 {
+  font-size: 14px;
+  font-weight: 300;
+  border: none;
 }
 
 .logo {
@@ -133,13 +155,13 @@ form.link, form.button {
 
 /* Discography */
 
-.disk-wrapper {
+.disc-wrapper {
   margin-bottom: 50px;
 }
 
-.disk-wrapper h3 {
+.disc-wrapper h3 {
+  font-size: 16px;
   padding-bottom: 2px;
-  border-bottom: dotted 1px rgba(255,255,255, 0.3);
 }
 
 .row {
@@ -169,7 +191,7 @@ img.cover {
 }
 
 
-.disk-info a {
+.disc-info a {
   text-decoration: none;
   font-size: 16px;
   display: inline-block;
@@ -225,6 +247,23 @@ span.duration {
   border: none;
 }
 
+.bottom {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.fb-like, .tw-share{
+  display: inline-block;
+}
+
+.tw-share a{
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.fb_iframe_widget span {
+  vertical-align: baseline !important;
+}
 /* Band */
 
 /* ----------- iPhone 4 (4S) and 5(5S) ----------- */

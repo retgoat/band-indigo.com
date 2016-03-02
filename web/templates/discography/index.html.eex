@@ -1,10 +1,14 @@
+<div class="small-content">
+  <h1>Discography</h1>
+  <h2>Here you can find info about our distributed music.</h2>
+</div>
 <%= for disk <- @disks do %>
   <div class="row">
     <div class="disk-wrapper">
       <h3><%= Calendar.Strftime.strftime!(disk.year, "%Y") <> " " <> disk.name %></h3>
       <div class="cells">
         <div class="cell cover-wrapper">
-          <img class="cover" src="<%= "/images/" <> disk.cover_name %>"/>
+          <img class="cover" src="<%= "/images/" <> disk.cover_name %>" alt="<%= disk.cover_name%>"/>
         </div> <!-- cover cell -->
 
         <div class="cell">
@@ -27,9 +31,6 @@
         <a href="#">Buy it on iTunes</a>
         <a href="#">Buy it on Google Play</a>
         <a href="#">Buy it on Amazon</a>
-        <%# <img src="/images/itunes.png" alt="iTunes logo" />
-        <img src="/images/google_play.png" alt="Google Play logo"/>
-        <img src="/images/amazon.png" alt="Amazon logo"/> %>
       </div>
     </div> <!-- disk-wrapper -->
   </div> <!-- row -->
