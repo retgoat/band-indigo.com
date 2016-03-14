@@ -4,11 +4,14 @@ defmodule BandIndigo.Disk do
   import Ecto.Query
 
   schema "disks" do
-    field :name,       :string
-    field :year,       Ecto.Date
-    field :label,      :string
-    field :cover_name, :string
-    has_many :tracks,  BandIndigo.Track
+    field :name,             :string
+    field :year,             Ecto.Date
+    field :label,            :string
+    field :cover_name,       :string
+    field :itunes_link,      :string
+    field :google_play_link, :string
+    field :amazon_link,      :string
+    has_many :tracks,        BandIndigo.Track
 
     timestamps
   end

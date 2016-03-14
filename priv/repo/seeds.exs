@@ -9,11 +9,28 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+# clean database
+BandIndigo.Repo.delete_all(BandIndigo.Track)
+BandIndigo.Repo.delete_all(BandIndigo.Disk)
+
 {:ok, d1_date} = Ecto.Date.cast("2009-01-11")
 {:ok, d2_date} = Ecto.Date.cast("2012-01-11")
 
-d1 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "La terre est bleue...", label: "Georgaphy Edge", year: d1_date, cover_name: "earth_2009.jpg"})
-d2 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "Bushido", label: "Georgaphy Edge", year: d2_date, cover_name: "bushido_2012.jpg"})
+d1 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "La terre est bleue...",
+                                              label: "Georgaphy Edge",
+                                              year: d1_date,
+                                              cover_name: "earth_2009.jpg",
+                                              itunes_link: "https://itunes.apple.com/us/album/la-terre-est-bleue-comme-une/id1084128131",
+                                              google_play_link: "https://play.google.com/store/music/album/Indigo_La_Terre_Est_Bleue_Comme_Une_Orange?id=Bsfr4sx5yhrzfvdfmpesolrl2ku",
+                                              amazon_link: "https://www.amazon.com/gp/product/B01BPW05YM"})
+d2 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "Bushido",
+                                              label: "Georgaphy Edge",
+                                              year: d2_date,
+                                              cover_name: "bushido_2012.jpg",
+                                              itunes_link: "https://itunes.apple.com/us/album/bushido/id1084105818",
+                                              google_play_link: "https://play.google.com/store/music/album/Indigo_Bushido?id=Bfkkhyraviqcqlfu2vh2uqkjiae",
+                                              amazon_link: "https://www.amazon.com/gp/product/B01BPTNEY8"})
 
 tracks = [
   {"Kaleidoscope", "00:03:11", d1.id},
