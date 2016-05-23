@@ -1,0 +1,7 @@
+<div class="popup-gallery">
+  <%= for picture <- @data.media do %>
+    <a href="<%= picture.images.standard_resolution.url %>">
+      <img class="img-rounded" alt="Photo" src="<%= picture.images.low_resolution.url %>" style="width: 140px; height: 140px; margin: 10px">
+    </a>
+  <% end %>
+</div>

@@ -19,7 +19,7 @@ defmodule BandIndigo.Mixfile do
   def application do
     [mod: {BandIndigo, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :mariaex, :tzdata, :logger_file_backend]]
+                    :phoenix_ecto, :mariaex, :tzdata, :logger_file_backend, :elixtagram]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +37,8 @@ defmodule BandIndigo.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:calecto, "~> 0.4.1"},
-     {:logger_file_backend, "0.0.4"}]
+     {:logger_file_backend, "0.0.4"},
+     {:elixtagram, "~> 0.2.6"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

@@ -20,5 +20,6 @@ defmodule BandIndigo.Router do
 
     get "/discography", DiscographyController, :index
     get "/band", BandController, :index
+    get "/photo", PhotoController, :index
   end
 end
