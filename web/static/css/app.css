@@ -273,6 +273,13 @@ span.duration {
   and (max-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+  ul.nav li {
+    display:block;
+  }
+  ul.nav li a:hover, ul.nav li a.active, ul.nav li a.active:hover {
+    border: none;
+  }
+
   .indigo-photo-wrapper img {
     width: 90%;
   }
