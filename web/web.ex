@@ -18,7 +18,7 @@ defmodule BandIndigo.Web do
 
   def model do
     quote do
-      use Ecto.Model
+      use Ecto.Schema
       use Calecto.Model, usec: true
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
@@ -30,7 +30,7 @@ defmodule BandIndigo.Web do
       use Phoenix.Controller
 
       alias BandIndigo.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
       import BandIndigo.Router.Helpers
@@ -62,7 +62,7 @@ defmodule BandIndigo.Web do
       use Phoenix.Channel
 
       alias BandIndigo.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
     end
   end

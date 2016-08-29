@@ -48,7 +48,7 @@
         </ul>
       </div>
 
-      <%= @inner %>
+      <%= render @view_module, @view_template, assigns %>
 
       <div class="bottom">
         <div class="fb-like" data-href="https://www.facebook.com/band.indigo.nsk" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>

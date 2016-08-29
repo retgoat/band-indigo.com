@@ -5,6 +5,11 @@
 # is restricted to this project.
 use Mix.Config
 
+# configure the repo
+config :band_indigo,
+ ecto_repos: [BandIndigo.Repo],
+ namespace: BandIndigo
+
 # Configures the endpoint
 config :band_indigo, BandIndigo.Endpoint,
   url: [host: "localhost"],
