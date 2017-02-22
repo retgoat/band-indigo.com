@@ -17,19 +17,19 @@ BandIndigo.Repo.delete_all(BandIndigo.Disk)
 {:ok, d1_date} = Ecto.Date.cast("2009-01-11")
 {:ok, d2_date} = Ecto.Date.cast("2012-01-11")
 
-d1 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "La terre est bleue...",
+d1 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "La Terre est bleue comme une orange",
                                               label: "Georgaphy Edge",
                                               year: d1_date,
                                               cover_name: "earth_2009.jpg",
                                               itunes_link: "https://itunes.apple.com/us/album/la-terre-est-bleue-comme-une/id1084128131",
-                                              google_play_link: "https://play.google.com/store/music/album/Indigo_La_Terre_Est_Bleue_Comme_Une_Orange?id=Bsfr4sx5yhrzfvdfmpesolrl2ku",
+                                              google_play_link: "https://play.google.com/store/music/album?id=Bsfr4sx5yhrzfvdfmpesolrl2ku&tid=song-Tu4pnmlx3xqu7ub6itsrg6x24zi&hl=en",
                                               amazon_link: "https://www.amazon.com/gp/product/B01BPW05YM"})
 d2 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "Bushido",
                                               label: "Georgaphy Edge",
                                               year: d2_date,
                                               cover_name: "bushido_2012.jpg",
-                                              itunes_link: "https://itunes.apple.com/us/album/bushido/id1084105818",
-                                              google_play_link: "https://play.google.com/store/music/album/Indigo_Bushido?id=Bfkkhyraviqcqlfu2vh2uqkjiae",
+                                              itunes_link: "https://itunes.apple.com/us/album/bushido/id1208009998",
+                                              google_play_link: "https://play.google.com/store/music/album/Indigo_Bushido?id=B6db7rej2yum5wy26fptrj4dl3u&hl=en",
                                               amazon_link: "https://www.amazon.com/gp/product/B01BPTNEY8"})
 
 tracks = [
