@@ -21,7 +21,7 @@ d1 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "La Terre est bleue comme un
                                               label: "Georgaphy Edge",
                                               year: d1_date,
                                               cover_name: "earth_2009.jpg",
-                                              itunes_link: "https://itunes.apple.com/ru/album/la-terre-est-bleue-comme-une-orange/id1208303564",
+                                              itunes_link: "https://itunes.apple.com/us/album/la-terre-est-bleue-comme-une-orange/id1208303564",
                                               google_play_link: "https://play.google.com/store/music/album?id=Bsfr4sx5yhrzfvdfmpesolrl2ku&tid=song-Tu4pnmlx3xqu7ub6itsrg6x24zi&hl=en",
                                               amazon_link: "https://www.amazon.com/gp/product/B01BPW05YM"})
 d2 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "Bushido",
