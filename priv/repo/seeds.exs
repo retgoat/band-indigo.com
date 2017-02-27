@@ -22,14 +22,14 @@ d1 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "La Terre est bleue comme un
                                               year: d1_date,
                                               cover_name: "earth_2009.jpg",
                                               itunes_link: "https://itunes.apple.com/us/album/la-terre-est-bleue-comme-une-orange/id1208303564",
-                                              google_play_link: "https://play.google.com/store/music/album?id=Bsfr4sx5yhrzfvdfmpesolrl2ku&tid=song-Tu4pnmlx3xqu7ub6itsrg6x24zi&hl=en",
+                                              google_play_link: "https://play.google.com/store/music/album?id=Bsfr4sx5yhrzfvdfmpesolrl2ku&tid=song-T2l4vtknlqq7rirr22tngrpcnpu",
                                               amazon_link: "https://www.amazon.com/gp/product/B01BPW05YM"})
 d2 = BandIndigo.Repo.insert!(%BandIndigo.Disk{name: "Bushido",
                                               label: "Georgaphy Edge",
                                               year: d2_date,
                                               cover_name: "bushido_2012.jpg",
                                               itunes_link: "https://itunes.apple.com/us/album/bushido/id1208009998",
-                                              google_play_link: "https://play.google.com/store/music/album/Indigo_Bushido?id=B6db7rej2yum5wy26fptrj4dl3u&hl=en",
+                                              google_play_link: "https://play.google.com/store/music/album?id=B6db7rej2yum5wy26fptrj4dl3u&tid=song-Talnrfa4kkdsn6pkwaf6nm6q7oe",
                                               amazon_link: "https://www.amazon.com/gp/product/B01BPTNEY8"})
 
 tracks = [
