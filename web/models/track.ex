@@ -5,6 +5,7 @@ defmodule BandIndigo.Track do
   schema "tracks" do
     field :name, :string
     field :duration, Ecto.Time
+    field :order, :integer
     belongs_to :disk, BandIndigo.Disk
 
     timestamps
